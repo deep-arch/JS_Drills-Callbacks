@@ -1,0 +1,20 @@
+{
+  "name": "callbacks",
+  "version": "1.0.0",
+  "main": "callback1.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start1": "cd test && node testCallback1.js",
+    "start2": "cd test && node testCallback2.js",
+    "start3": "cd test && node testCallback3.js",
+    "start4": "cd test && node testCallback4.js",
+    "start5": "cd test && node testCallback5.js",
+    "start6": "cd test && node testCallback6.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
