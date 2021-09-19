@@ -6,8 +6,7 @@ function callback3(boardId, cards, callback) {
     if (data) {
       callback(null, data);
     } else {
-      let err = new Error("Invalid ID");
-      callback(err);
+      return;
     }
   }, 2 * 1000);
 }
