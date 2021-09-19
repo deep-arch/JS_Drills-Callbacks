@@ -10,47 +10,35 @@ const { callback2 } = require("./callback2");
 
 const { callback3 } = require("./callback3");
 
+
 function callback5(boards, cards, lists) {
-  setTimeout(() => {
-    boards.filter((board) => {
-      if (board.name === "Thanos") {
-        let tBoards = [];
-        tBoards.push(board);
-        callback1(board.id, tBoards, (error, data) => {
-          if (error) {
-            console.log(error);
-          } else {
-            let tData = [];
-            tData.push(data);
-            tData.filter((tDataId) => {
-              callback2(tDataId.id, lists, (error, data) => {
-                if (error) {
-                  console.log(error);
-                } else {
-                  let name = ["Mind", "Space"]; // Details for both Mind and Space
-                  name.forEach((tName) => {
-                    data.filter((tDataName) => {
-                      if (tDataName.name === tName) {
-                        callback3(tDataName.id, cards, (err, data) => {
-                          if (err) {
-                            console.log(err);
-                          } else {
-                            data.forEach((tData) => {
-                              console.log(tData);
-                            });
-                          }
-                        });
-                      }
-                    });
-                  });
-                }
-              });
+  boards.filter((board) => {
+    if (board.name === "Thanos") {
+      let tBoards = [];
+      tBoards.push(board);
+      setTimeout(() => {
+        callback1(board.id, tBoards)
+          .then((boardId) => console.log(boardId))
+          .catch((error) => console.log(error));
+      }, 2 * 1000);
+      setTimeout(() => {
+        callback2(board.id, lists)
+          .then((lists) => {
+            console.log(lists);
+            lists.filter((list) => {
+              if (list.name === "Mind" || list.name === "Space") {
+                setTimeout(() => {
+                  callback3(list.id, cards)
+                    .then((cards) => console.log(cards))
+                    .catch((error) => console.log(error));
+                }, 0);
+              }
             });
-          }
-        });
-      }
-    });
-  }, 2 * 1000);
+          })
+          .catch((error) => console.log(error));
+      }, 2 * 1000);
+    }
+  });
 }
 
 module.exports = { callback5 };
