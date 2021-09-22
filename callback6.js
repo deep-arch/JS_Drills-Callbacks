@@ -48,4 +48,4 @@ function callback6(boards, cards, lists) {
   }, 2 * 1000);
 }
 
-module.exports = { callback6 };
+module.exports = callback6;

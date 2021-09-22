@@ -53,4 +53,4 @@ function callback5(boards, cards, lists) {
   }, 2 * 1000);
 }
 
-module.exports = { callback5 };
+module.exports = callback5;
