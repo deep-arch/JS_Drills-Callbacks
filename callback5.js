@@ -4,11 +4,11 @@
 //     Get all the lists for the Thanos board
 //     Get all cards for the Mind and Space lists simultaneously
 
-const { callback1 } = require("./callback1");
+const callback1 = require("./callback1");
 
-const { callback2 } = require("./callback2");
+const callback2 = require("./callback2");
 
-const { callback3 } = require("./callback3");
+const callback3 = require("./callback3");
 
 function callback5(boards, cards, lists) {
   setTimeout(() => {

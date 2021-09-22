@@ -6,9 +6,10 @@ function callback2(boardId, lists, callback) {
     if (data) {
       callback(null, data);
     } else {
-      return;
+      let error = new Error("Invalid ID");
+      callback(error);
     }
   }, 2 * 1000);
 }
 
-module.exports = { callback2 };
+module.exports = callback2;
