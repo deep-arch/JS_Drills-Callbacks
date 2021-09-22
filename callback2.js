@@ -7,7 +7,7 @@ function callback2(boardId, lists) {
       if (data) {
         resolve(data);
       } else {
-        reject("Not Available!")
+        reject("Not Available!");
       }
     }, 2 * 1000);
   });
