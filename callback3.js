@@ -13,4 +13,4 @@ function callback3(listId, cards) {
   });
 }
 
-module.exports = { callback3 };
+module.exports = callback3;

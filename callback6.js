@@ -4,11 +4,11 @@
 //     Get all the lists for the Thanos board
 //     Get all cards for all lists simultaneously
 
-const { callback1 } = require("./callback1");
+const callback1 = require("./callback1");
 
-const { callback2 } = require("./callback2");
+const callback2 = require("./callback2");
 
-const { callback3 } = require("./callback3");
+const callback3 = require("./callback3");
 
 function callback6(boards, cards, lists) {
   boards.filter((board) => {
@@ -38,4 +38,4 @@ function callback6(boards, cards, lists) {
   });
 }
 
-module.exports = { callback6 };
+module.exports = callback6;

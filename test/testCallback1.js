@@ -1,4 +1,4 @@
-const { callback1 } = require("../callback1");
+const callback1 = require("../callback1");
 const boards = require("../data/boards.json");
 
 callback1("mcu453ed", boards)

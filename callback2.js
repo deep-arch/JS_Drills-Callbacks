@@ -13,4 +13,4 @@ function callback2(boardId, lists) {
   });
 }
 
-module.exports = { callback2 };
+module.exports = callback2;
